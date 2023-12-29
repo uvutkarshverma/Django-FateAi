@@ -1,0 +1,205 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* Create some variable for color and font family and use it in your project. */
+/* Path: assets\style.css */
+:root{
+    --font1: 'Vina Sans', cursive;
+    --font2: 'Bebas Neue', cursive;
+    --font3: 'Ubuntu', sans-serif;
+    
+}
+
+.font1{
+    font-family: var(--font1);
+}
+.font2{
+    font-family: var(--font2);
+}
+.font3{
+    font-family: var(--font3);
+}
+
+.width100{
+    width: 100%;
+}
+
+.posifixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+   
+    z-index: 999;
+    background-color: var(--background-dark-color);
+    padding: .5rem 0;
+    transition: all .5s ease-in-out;
+}
+.btnsignin{
+    font-size: 19px;
+    font-weight:400;
+    letter-spacing: 1.8px;
+
+}
+.nav-link, .cardbtn{
+    font-size: 18px;
+    font-weight:400;
+    letter-spacing: 1.8px;
+    font-family: var(--font2);
+    padding: 0;
+
+
+}
+.nav-item{
+    margin: 0 20px ;
+   
+}
+.form1{
+    display: flex;
+    height: 35vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.mainforminput{
+    width: 100%;
+    font-family: var(--font3);
+    font-family: 500;
+    font-size: 18px;
+    padding: 15px 90px 15px 30px;
+    background-color: #e2e2e2;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    box-shadow: 2px 2px 2px 2px #f6f6f6;
+}
+@media(max-width: 768px){
+    .mainforminput{
+        padding: 15px 70px 15px 30px;
+    }
+}
+.searchbtn{
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  padding: 12px 30px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  background-color: var(--background-dark-color);
+  color: var(--font-light-color);
+  cursor: pointer;
+  z-index: +1;
+  transition: all .5s ease-in-out;
+  &:hover{
+      background-color: var(--primary-color);
+      color: var(--font-light-color);
+  }
+
+}
+
+.card-list h2{
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    font-family: var(--font2);
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.cards{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.card{
+    margin:20px auto;
+}
+.card-title{
+    font-size: 28px;
+}
+.cardbtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 17px;
+    font-weight:400;
+    letter-spacing: 1.8px;
+    font-family: var(--font2);
+    padding:7px 15px;
+}
+.cardbtn SVG{
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+.cardbtn span{
+    font-family: var(--font2);
+    margin: 0;
+}
+.link{
+    text-decoration: none;
+    color: var(--font-light-color);
+    transition: all .5s ease-in-out;
+    &:hover{
+        color: var(--primary-color);
+    }
+}
+
+
+@media(max-width: 768px){
+    footer{
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    footer div{
+        margin: auto;
+    }
+    footer ul{
+       margin: auto;
+    }
+}
+
+/* Path: static\assets\style.css */
+/*ABout PAge */
+.about{
+    width:100%;
+ 
+}
+.jumbotron{
+    background-color: #e9ecef;
+    padding: 75px 0;
+}
+.jumbotron .container{
+    padding-top:120px;
+
+}
+
+.bar-bottom{
+    background-color: #6e07f3;
+    border-radius: 20px;
+    display: grid;
+    grid-auto-rows: 135px;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+}
+.bbtext{
+    color: #e2e2e2;
+    justify-content: center;
+    
+}

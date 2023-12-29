@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<title>Home </title>
+{% endblock %}
+
+
+{% block body %}
+<div class="container-fluid">
+    <div class="p-1 text-center bg-body-tertiary rounded-3 width100">
+        <svg class="bi mt-4 mb-3" style="color: var(--bs-indigo);" width="100" height="100">
+            <use xlink:href="#bootstrap"></use>
+        </svg>
+        <h1 class="text-body-emphasis font2 display-1">AI Junction</h1>
+        <p class="col-lg-8 mx-auto fs-5 text-muted font3">
+            THE LARGEST AI TOOLS DIRECTORY, <code>UPDATED DAILY</code>
+        </p>
+
+        <div class="w-100">
+
+            <div class="container ">
+
+                <div class="form1">
+                    <input type="text" class="mainforminput font3" placeholder="Search Tool " autofocus>
+                    <a href="/" class="searchbtn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="container my-5 card-list">
+    <h2 class="text-center font2">Latest Ai tools : </h2>
+    <div class="cards">
+
+
+        {% for item in data %}
+        <div class="card" style="width: 18rem;">
+            <img src= {{ item.img }}
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title font2">{{ item.name }}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16px" height="16px"
+                        fill="#4CAF50">
+                        <path
+                            d="M 5 2 C 3.3545455 2 2 3.3545455 2 5 L 2 19 C 2 20.645455 3.3545455 22 5 22 L 19 22 C 20.645455 22 22 20.645455 22 19 L 22 11 L 20 11 L 20 19 C 20 19.554545 19.554545 20 19 20 L 5 20 C 4.4454545 20 4 19.554545 4 19 L 4 5 C 4 4.4454545 4.4454545 4 5 4 L 14 4 L 14 2 L 5 2 z M 20.472656 3.9140625 L 11.179688 13.765625 L 7.5078125 10.09375 L 6.09375 11.507812 L 11.220703 16.634766 L 21.927734 5.2871094 L 20.472656 3.9140625 z" />
+                    </svg>
+                </h5>
+                <p class="card-text font3">{{ item.description }}</p>
+                <a target="_blank" href={{ item.link }}
+                    class="cardbtn d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill"><span>
+                        Have a look </span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+                        <path fill-rule="evenodd"
+                            d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+                    </svg></a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+
