@@ -77,14 +77,14 @@ WSGI_APPLICATION = 'Fateai.wsgi.app'
 
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'anumak_fateai',
-        'USER': 'anumak_uv',
-        'PASSWORD': 'uvutkarshverma@123',
-        'HOST':'localhost',
-        'PORT':'3306',
-    }
+   'default': {
+       'ENGINE': 'django.db.backends.postgresql',
+       'NAME': 'verceldb',
+       'USER': 'default',
+       'PASSWORD': 'oVUa79ABWeNj',
+       'HOST': 'ep-weathered-scene-28919330-pooler.us-east-1.postgres.vercel-storage.com',
+       'PORT': '5432',
+   }
 }
 
 
