@@ -80,9 +80,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'ayodhya1_fateai',
-        'USER': 'ayodhya1_uvadmin',
-        'PASSWORD': 'w(og+%UG-4o7',
-        'HOST':'server541.iseencloud.net',
+        'USER': 'ayodhya1_adminuv',
+        'PASSWORD': 'IUhH}#]EMlvx',
+        'HOST':'server551.iseencloud.net',
         'PORT':'3306',
     }
 }
