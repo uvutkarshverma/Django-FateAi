@@ -113,6 +113,9 @@
     text-align: center;
     margin: 2rem 0;
 }
+.search-list-card h2{
+    margin: 8rem 0 2rem 0;
+}
 
 .cards{
     width: 100%;

@@ -1,43 +1,18 @@
 {% extends 'base.html' %}
 
 {% block meta %}
-
-
-
-<title>Dashboard - Your Ai Tools</title>
+<title>Search Result for {{name}} </title>
 {% endblock %}
 
 
 {% block body %}
 
-<main role="about">
 
 
-    <div class="jumbotron ">
-        <div class="container">
-            <h1 class="display-3">Dashboard</h1>
-            <p>Welcome to your dashboard, where you can manage and showcase your AI tools. To add a new tool to your
-                collection or update existing ones, simply fill out the form below. Share your latest innovations with
-                the world!</p>
-            <p><a class="btn btn-success btn-lg" href="/addlisting" role="button">List Your Ai Tool »</a></p>
-
-        </div>
-    </div>
-
-</main>
-
-{% for message in messages %}
-<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-    <strong> {{ message }}!</strong>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-{% endfor %}
-
-
-<div class="container my-5 card-list">
-    <h2 class="text-center font2">Your Ai tools : </h2>
-
+<div class="container my-5 card-list search-list-card">
+    <h2 class="text-center font2">Your Search Result : {{name}} </h2>
     <div class="cards">
+
 
         {% if data %}
         {% for item in data %}
@@ -61,38 +36,16 @@
                         <path fill-rule="evenodd"
                             d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
                     </svg></a>
-                <a href=/updatelisting/{{ item.id }}
-                    class="cardbtn d-inline-flex align-items-center btn btn-success btn-lg px-4 rounded-pill">Edit</a>
-
-                <form method="POST">
-                    {% csrf_token %}
-                    <input type="text" name="id" value="{{ item.id }}" hidden>
-                    <div class="form-group my-4">
-                        <button type="submit" name="submit-delete" value="Submit"
-                            class="cardbtn d-inline-flex align-items-center btn btn-danger btn-lg px-4 rounded-pill my-2">Delete</button>
-                    </div>
-
-                </form>
-
-
             </div>
         </div>
+
         {% endfor %}
         {% else %}
-        <h4>No Listing Found. Add Your First AI Tool. <br> <a class="btn btn-primary btn-lg my-2" href="/addlisting"
-                role="button">List Your Ai Tool »</a> </h4>
+        <h4>We have not find any matching tool related to your search. Try Searching with Different Keywords <br>
+        <a class="btn btn-success btn-lg my-2" href="/" role="button">Search Again</a>
+        <a class="btn btn-primary btn-lg my-2" href="/addlisting" role="button">List Your Ai Tool »</a>
+        </h4>
         {% endif %}
     </div>
 </div>
-
-
-<div class="container bar-bottom">
-    <div class="bbtext display-6 font2">Create an Impact Lets find the tools </div>
-    <div class="bbbutton"><a class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill font3"
-            href="/" type="button">
-            Lets Explore
-        </a></div>
-
-</div>
-
 {% endblock %}

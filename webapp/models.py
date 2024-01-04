@@ -14,6 +14,8 @@ def validate_https_url(value):
 
 # Create your models here.
 class AItools(models.Model):
+    id = models.AutoField(primary_key=True)
+    user = models.CharField(max_length=200,default="utkarsh6")
     name = models.CharField(max_length=200)
     description = models.CharField(max_length=1000)
     link = models.CharField(max_length=200, validators=[validate_https_url])
