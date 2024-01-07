@@ -1,8 +1,8 @@
 
-
+from dotenv import load_dotenv
 from pathlib import Path
 import os
-
+load_dotenv()
 SITE_ID =1
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'Fateai.wsgi.app'
 DATABASES = {
     'default': {
         "ENGINE": "django.db.backends.postgresql",
-        'NAME': 'verceldb',
-        'USER': 'default',
-        'PASSWORD': 'oVUa79ABWeNj',
-        'HOST':'ep-weathered-scene-28919330-pooler.us-east-1.postgres.vercel-storage.com',
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASS'),
+        'HOST':os.environ.get('DB_HOST'),
         'PORT':'5432',
     }
 }
